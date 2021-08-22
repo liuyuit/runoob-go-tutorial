@@ -1,0 +1,17 @@
+version: "3"
+
+services:
+  go:
+    build:
+      context: ./service/dockerfile/go
+    container_name: tutorial_go
+    working_dir: /go/src
+    volumes:
+      - ./:/go/src
+    ports:
+      - "9091:8080"
+    stdin_open: true
+    tty: true
+    environment:
+      - TZ=Asia/Shanghai
+#    command: go run /go/src/examplecom/http_demo/main.go
