@@ -5,7 +5,7 @@ import "fmt"
 var x, y int = 12, 13
 
 var (
-	xa int = 12
+	xa int    = 12
 	xb string = "ok"
 )
 
@@ -20,6 +20,7 @@ func main() {
 
 	zeroVariable()
 	multiDefine()
+	valueAdnReference()
 }
 
 func zeroVariable() {
@@ -48,4 +49,15 @@ func multiDefine() {
 
 	vname11, vname12, vname13 := 3, "3", true
 	fmt.Println(vname11, vname12, vname13)
+}
+
+func valueAdnReference() {
+	var i int
+	i = 7
+
+	var p *int
+	p = &i
+
+	a := 50
+	fmt.Println(i, p, a)
 }
