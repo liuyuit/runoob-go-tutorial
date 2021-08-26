@@ -6,11 +6,11 @@ func main() {
 	var a int = 10
 
 	fmt.Printf("变量的地址: %x\n", &a)
-	usage()
+	usagePointer()
 	nilPtr()
 }
 
-func usage() {
+func usagePointer() {
 	var a int = 20
 	var ip *int
 	ip = &a
